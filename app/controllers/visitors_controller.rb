@@ -5,6 +5,11 @@ class VisitorsController < ApplicationController
     @owner = Owner.new
     Rails.logger.debug 'DEBUG: Owner name is ' + @owner.name
     # raise 'Deliberate Failure'
+
+    flash.now[:notice] = 'Welcome!'
+    flash.now[:alert] = 'My birthday is soon!'
+    # <div class="notice">Welcome!</div>
+    #c<div class="alert">My birthday is soon.</div>
   end
 
 end
