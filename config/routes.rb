@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   root to: 'visitors#new'
   #post 'contact', to: 'contacts#process_form'
   resources :contacts, only: [:new, :create]
+  resources :visitors, only: [:new, :create]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
